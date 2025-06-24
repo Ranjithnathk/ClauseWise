@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Logs and local DB
+*.log
+clausewise.db
+
+# Jupyter and IPython
+.ipynb_checkpoints
+*.ipynb
+
+# Docker artifacts
+*.tar
+*.bak
+
+# VSCode settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+.cache/
+coverage/
+
+# Hugging Face / Transformers cache
+huggingface/
+*.h5
+*.ckpt
+*.pt
+
+# DVC or ML experiment files
+*.dvc
+mlruns/
+.ragas/
+experiments/
+
+# Streamlit specific
+.streamlit/
+
+# Python wheels/dist
+build/
+dist/
+*.egg-info/
+
+# Unit test results
+htmlcov/
+coverage.xml
+*.cover
+
+# GitHub Actions secrets (never commit)
+secrets.yml

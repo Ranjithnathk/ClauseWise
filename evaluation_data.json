@@ -1,0 +1,80 @@
+[
+  {
+    "pdf_name": "Employment_Agreement",
+    "qa_pairs": [      
+      {
+        "question": "What is the duration of vacation entitlement for the Executive each calendar year?",
+        "answer": "At least four (4) weeks paid vacation per calendar year."
+      },
+      {
+        "question": "Under what conditions can the Agreement be automatically renewed?",
+        "answer": "The Agreement shall automatically renew for additional one-year terms unless either party delivers written notice of non-renewal at least 60 days prior to the renewal date."
+      },
+      {
+        "question": "What does 'Cause' include for termination under this Agreement?",
+        "answer": "Cause includes breach of the Invention, Confidential Information and Non-Competition Agreement, conviction or plea to felony or related offenses, acts of fraud, violations of laws exposing the Company to material liability, or material breach of this Agreement uncorrected after 30 days' written notice."
+      },
+      {
+        "question": "What severance pay is the Executive entitled to if terminated without Cause or following Constructive Termination?",
+        "answer": "Base Compensation for the remaining period of the current term, but not exceeding six months, paid as a lump sum within 30 days after termination."
+      },
+      {
+        "question": "Where will arbitration of disputes under this Agreement take place?",
+        "answer": "Houston, Texas, under the National Rules for the Resolution of Employment Disputes of the American Arbitration Association."
+      }
+    ]
+  },
+  
+  {
+    "pdf_name": "Leasing_Rental_Agreement",
+    "qa_pairs": [
+      {
+        "question": "By what time must the resident vacate the premises and return the keys on the lease end date?",
+        "answer": "The resident must completely vacate the premises and return the key(s) by NOON on the day the lease term ends."
+      },
+      {
+        "question": "What is the maximum late charge percentage applied if rent is not received by 5:00 P.M. on the fifth day of the month?",
+        "answer": "The late charge will not exceed the lesser of 10% of the periodic rent or 10% of the remaining balance due at the time the late charge is assessed."
+      },
+      {
+        "question": "What are the conditions for management to refund the security deposit after the lease ends?",
+        "answer": "Management agrees to refund the security deposit upon satisfaction of all lease provisions, deduction of any damages or charges legally owed, receipt of the resident’s forwarding address, and after providing an itemized list of any deductions."
+      },
+      {
+        "question": "What is required before a resident can assign or sublease their apartment according to the lease agreement?",
+        "answer": "The resident must obtain management’s prior written consent, use management’s form for lease assignment or sublease, and the new resident or sublessee must apply and qualify for occupancy."
+      },
+      {
+        "question": "What are the resident’s obligations regarding smoke and carbon monoxide detectors under Virginia law?",
+        "answer": "Residents must keep smoke and carbon monoxide detectors operational, notify management of any malfunctions or low batteries, must not disable or remove detectors, and will be charged $50 if detectors are found removed, disconnected, or disabled."
+      }
+    ]
+  },
+  
+  {
+    "pdf_name": "Non_Disclosure-Agreement",
+    "qa_pairs": [
+      {
+        "question": "Who are the parties involved in this Non-Disclosure Agreement?",
+        "answer": "The parties are Satin Creditcare Network Limited (Disclosing Party/SCNL) and the Receiving Party/Buyer/ARC, a corporate company incorporated under the Companies Act, having its registered office as specified."
+      },
+      {
+        "question": "What is defined as 'Confidential Information' in this Agreement?",
+        "answer": "'Confidential Information' includes all information related to stressed Financial Assets listed for sale, whether marked confidential or not, disclosed in any form, including data, documents, business plans, financial information, customer details, and any analysis or notes related thereto, except information that is public, previously known without restriction, independently developed, or becomes public other than by breach."
+      },
+      {
+        "question": "For how long is this Non-Disclosure Agreement effective and binding?",
+        "answer": "The Agreement is effective from the date of execution for a period of 12 (Twelve) months unless terminated earlier, and obligations of confidentiality continue for 12 months after termination or expiry."
+      },
+      {
+        "question": "What happens if the Receiving Party is legally compelled to disclose Confidential Information?",
+        "answer": "The Receiving Party must promptly notify the Disclosing Party with a Disclosure Notice detailing the requesting Person, nature of information required, reasons for disclosure, and time period allowed, to enable the Disclosing Party to seek protective measures."
+      },
+      {
+        "question": "Where will any disputes arising under this Agreement be resolved?",
+        "answer": "Disputes will be referred to arbitration by a sole arbitrator mutually appointed by the Parties, with the place of arbitration being Delhi, governed by the Arbitration and Conciliation Act, 1996, and the courts at New Delhi shall have exclusive jurisdiction over any suits arising from the Agreement."
+      }
+    ]
+  }
+  
+]
