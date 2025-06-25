@@ -4,8 +4,8 @@ import html
 import os
 
 st.set_page_config(page_title="ClauseWise ⚖️", layout="wide")
-API_URL = "http://127.0.0.1:8000"
-#API_URL = "https://clausewise-backend-140738413424.us-central1.run.app"
+#API_URL = "http://127.0.0.1:8000"
+API_URL = "https://clausewise-backend-140738413424.us-central1.run.app"
 
 # --- Custom Styles ---
 st.markdown("""
