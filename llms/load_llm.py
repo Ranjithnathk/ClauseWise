@@ -19,7 +19,7 @@ def load_llm(model_name: str) -> Any:
         return ChatOpenAI(
             temperature=0,
             model_name=model_name,  # use exact model name like "gpt-4o"
-            openai_api_key=os.environ.get("AUTH_TOKEN")
+            openai_api_key=os.environ.get("OPENAI_API_KEY")
         )
 
     elif model_name.startswith("gemini"):

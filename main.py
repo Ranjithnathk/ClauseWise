@@ -6,6 +6,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 import uvicorn
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
 
 # Auth & DB modules
 from database import models, schemas, auth, database
@@ -166,6 +169,7 @@ def chat_endpoint(request: ChatRequest, current_user: models.User = Depends(get_
 
         state = {"messages": messages}
         result = agent.invoke(state)
+        #print("Agent result:", result)
 
         if isinstance(result, dict):
             if "output" in result:
