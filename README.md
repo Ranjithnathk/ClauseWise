@@ -24,10 +24,10 @@
 ## Live Demo
 
 **Frontend (Streamlit App)**  
- [https://clausewise-frontend-140738413424.us-central1.run.app](https://clausewise-frontend-140738413424.us-central1.run.app)
+ [https://clausewise-frontend.run.app](https://clausewise-frontend-140738413424.us-central1.run.app)
 
 **Backend (FastAPI API)**  
- [https://clausewise-backend-140738413424.us-central1.run.app](https://clausewise-backend-140738413424.us-central1.run.app)
+ [https://clausewise-backend.run.app](https://clausewise-backend-140738413424.us-central1.run.app)
 
 ---
 
@@ -98,23 +98,23 @@ ClauseWise/
 ## Local Development
 
 
-# 1. Clone the repo
+### 1. Clone the repo
 ```bash
 git clone https://github.com/Ranjithnathk/ClauseWise.git && cd ClauseWise
 ```
 
-# 2. Create & activate virtual environment
+### 2. Create & activate virtual environment
 ```
 conda create -p venv python==3.10 -y 
 source activate venv/
 ```
 
-# 3. Install dependencies
+### 3. Install dependencies
 ```
 pip install -r requirements.txt
 ```
 
-# 4. Create a .env file in the root directory 
+### 4. Create a .env file in the root directory 
 ```
 OPENAI_API_KEY = "your_openai_api_key"
 GROQ_API_KEY = "your_groq_api_key"
@@ -124,12 +124,12 @@ JWT_SECRET_KEY = "your_jwt_secret_key"
 AUTH_TOKEN = "your_auth_token"
 ```
 
-# 5. Run Backend
+### 5. Run Backend
 ```
 uvicorn main:app --reload --port 8000
 ```
 
-# 6. Run Frontend
+### 6. Run Frontend
 ```
 streamlit run ui/ui.py
 ```
@@ -138,25 +138,29 @@ streamlit run ui/ui.py
 
 ## Docker (Frontend + Backend)
 **Backend**
+```
 docker build -t clausewise-backend -f Dockerfile .
 docker run -p 8000:8000 clausewise-backend
+```
 
 **Frontend**
+```
 docker build -t clausewise-frontend -f Dockerfile.streamlit .
 docker run -p 8501:8501 clausewise-frontend
+```
 
 ---
 
 ## GCP Cloud Run Deployment
 
-# Backend
+### Backend
 ```
 docker build -t gcr.io/YOUR_PROJECT_ID/clausewise-backend .
 docker push gcr.io/YOUR_PROJECT_ID/clausewise-backend
 gcloud run deploy clausewise-backend --image gcr.io/YOUR_PROJECT_ID/clausewise-backend --platform managed --region us-central1 --allow-unauthenticated
 ```
 
-# Frontend
+### Frontend
 ```
 docker build -t gcr.io/YOUR_PROJECT_ID/clausewise-frontend -f Dockerfile.streamlit .
 docker push gcr.io/YOUR_PROJECT_ID/clausewise-frontend
@@ -183,4 +187,4 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Made by Ranjithnath Karunanidhi
+Done by [Ranjithnath Karunanidhi](https://www.linkedin.com/in/ranjithnathk/)
