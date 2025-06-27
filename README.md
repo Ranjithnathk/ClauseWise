@@ -34,11 +34,10 @@
 ## Features
 
 - Upload & parse legal PDFs  
-- Multi-LLM support: `GPT-4o`, `Gemini`, `Mistral`, `LLaMA`, `DeepSeek`, etc.  
+- Multi-LLM support: `GPT-4o`, `Gemini-2.0-flash`, `Llama3-70b-8192`, `Mistral-saba-24b`,`Deepseek-r1-distill-llama-70b`
 - Real-time legal question answering  
 - Citation-backed RAG responses  
-- Login / Signup authentication  
-- Evaluation: Faithfulness, ROUGE, BERTScore  
+- Login / Signup authentication   
 - FAISS vector store for document retrieval  
 - Dockerized frontend + backend  
 - CI/CD via GitHub Actions  
@@ -50,10 +49,10 @@
 
 | Layer       | Stack                                  |
 |-------------|----------------------------------------|
-| Frontend    | [Streamlit](https://streamlit.io/)     |
-| Backend     | [FastAPI](https://fastapi.tiangolo.com/) |
+| Frontend    | Streamlit                              |
+| Backend     | FastAPI                                |
 | LLMs        | OpenAI, Gemini, Mistral, LLaMA, DeepSeek |
-| Vector DB   | [FAISS](https://faiss.ai/)             |
+| Vector DB   | FAISS                                  |
 | DevOps      | Docker, GitHub Actions, GCP Cloud Run  |
 | Auth        | JWT, SQLAlchemy                        |
 
@@ -102,8 +101,9 @@ ClauseWise/
 # 1. Clone the repo
 git clone https://github.com/Ranjithnathk/ClauseWise.git && cd ClauseWise
 
-# 2. Create virtual environment
-python -m venv venv && source venv/bin/activate  # (or venv\Scripts\activate on Windows)
+# 2. Create & activate virtual environment
+conda create -p venv python==3.10 -y 
+source activate venv/
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -117,11 +117,11 @@ streamlit run ui/ui.py
 ---
 
 ## Docker (Frontend + Backend)
-Backend
+**Backend**
 docker build -t clausewise-backend -f Dockerfile .
 docker run -p 8000:8000 clausewise-backend
 
-Frontend
+**Frontend**
 docker build -t clausewise-frontend -f Dockerfile.streamlit .
 docker run -p 8501:8501 clausewise-frontend
 
@@ -132,20 +132,12 @@ docker run -p 8501:8501 clausewise-frontend
 # Backend
 docker build -t gcr.io/YOUR_PROJECT_ID/clausewise-backend .
 docker push gcr.io/YOUR_PROJECT_ID/clausewise-backend
-gcloud run deploy clausewise-backend \
-  --image gcr.io/YOUR_PROJECT_ID/clausewise-backend \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated
+gcloud run deploy clausewise-backend --image gcr.io/YOUR_PROJECT_ID/clausewise-backend --platform managed --region us-central1 --allow-unauthenticated
 
 # Frontend
 docker build -t gcr.io/YOUR_PROJECT_ID/clausewise-frontend -f Dockerfile.streamlit .
 docker push gcr.io/YOUR_PROJECT_ID/clausewise-frontend
-gcloud run deploy clausewise-frontend \
-  --image gcr.io/YOUR_PROJECT_ID/clausewise-frontend \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated
+gcloud run deploy clausewise-frontend --image gcr.io/YOUR_PROJECT_ID/clausewise-frontend --platform managed --region us-central1 --allow-unauthenticated
 
 ---
 
