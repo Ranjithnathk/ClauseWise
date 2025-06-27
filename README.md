@@ -97,22 +97,42 @@ ClauseWise/
 
 ## Local Development
 
-```bash
+
 # 1. Clone the repo
+```bash
 git clone https://github.com/Ranjithnathk/ClauseWise.git && cd ClauseWise
+```
 
 # 2. Create & activate virtual environment
+```
 conda create -p venv python==3.10 -y 
 source activate venv/
+```
 
 # 3. Install dependencies
+```
 pip install -r requirements.txt
+```
 
-# 4. Run Backend
+# 4. Create a .env file in the root directory 
+```
+OPENAI_API_KEY = "your_openai_api_key"
+GROQ_API_KEY = "your_groq_api_key"
+TAVILY_API_KEY = "your_tavily_api_key"
+GOOGLE_API_KEY = "your_google_api_key"
+JWT_SECRET_KEY = "your_jwt_secret_key"
+AUTH_TOKEN = "your_auth_token"
+```
+
+# 5. Run Backend
+```
 uvicorn main:app --reload --port 8000
+```
 
-# 5. Run Frontend
+# 6. Run Frontend
+```
 streamlit run ui/ui.py
+```
 
 ---
 
@@ -130,14 +150,18 @@ docker run -p 8501:8501 clausewise-frontend
 ## GCP Cloud Run Deployment
 
 # Backend
+```
 docker build -t gcr.io/YOUR_PROJECT_ID/clausewise-backend .
 docker push gcr.io/YOUR_PROJECT_ID/clausewise-backend
 gcloud run deploy clausewise-backend --image gcr.io/YOUR_PROJECT_ID/clausewise-backend --platform managed --region us-central1 --allow-unauthenticated
+```
 
 # Frontend
+```
 docker build -t gcr.io/YOUR_PROJECT_ID/clausewise-frontend -f Dockerfile.streamlit .
 docker push gcr.io/YOUR_PROJECT_ID/clausewise-frontend
 gcloud run deploy clausewise-frontend --image gcr.io/YOUR_PROJECT_ID/clausewise-frontend --platform managed --region us-central1 --allow-unauthenticated
+```
 
 ---
 
