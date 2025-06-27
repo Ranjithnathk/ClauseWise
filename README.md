@@ -1,4 +1,4 @@
-# ClauseWise Intelligent Legal Document Assistant (RAG + Multi-LLM)
+# ClauseWise - Full Stack Multi-LLM RAG Assistant
 ## Your AI Attorney to clear your Legal doubts
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
